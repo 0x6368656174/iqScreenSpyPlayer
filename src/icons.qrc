@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/control-pause.png</file>
+        <file>icons/control-record.png</file>
+        <file>icons/control-stop-square.png</file>
+        <file>icons/control.png</file>
+        <file>icons/calendar-next.png</file>
+        <file>icons/calendar-previous.png</file>
+        <file>icons/computer.png</file>
+        <file>icons/film-medium.png</file>
+        <file>icons/film-timeline.png</file>
+        <file>icons/arrow-circle-double.png</file>
+    </qresource>
+</RCC>
