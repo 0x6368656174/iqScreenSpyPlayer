@@ -124,7 +124,7 @@ void MainWindow::playPause() const
     if (m_mediaPlayer->state() == QMediaPlayer::PlayingState)
         m_mediaPlayer->pause();
     else
-        playFile(QUrl::fromLocalFile("/home/pashok/sun57_07.07.2015_23.50-08.07.2015_00.00.mkv"));
+        playFile(QUrl::fromLocalFile("/home/pashok/vboxshare/sun27_15.07.2015_09.10-15.07.2015_09.20.avi"));
 }
 
 void MainWindow::changeTimeLabelText() const
@@ -261,6 +261,10 @@ void MainWindow::saveCurrentFrame()
 
 void MainWindow::playFile(const QUrl &fileName) const
 {
+    if (m_mediaPlayer->currentMedia().canonicalUrl() == fileName) {
+        m_mediaPlayer->play();
+        return;
+    }
     m_mediaPlaylist->clear();
     m_mediaPlaylist->addMedia(fileName);
     m_mediaPlaylist->setCurrentIndex(0);
